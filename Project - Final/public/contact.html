@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+
+
+<body>
+    <header>
+        <h1><a href="contact.html">Contact Us</a></h1>
+
+        <input type="checkbox" id="navToggle" class="nav-toggle" />
+        <label for="navToggle" class="nav-toggle-label" aria-label="Toggle navigation">&#9776;</label>
+        
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="racerecaps.html">Race Recaps</a></li>
+                <li><a href="standings.html">Standings</a></li>
+                <li><a href="f1fantasy.html">F1 Fantasy</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Send Us an Email</h2>
+
+        <p>
+            Fill in the form below and ask us whatever inquiries you may have, whethere it is
+            suggestions on the website, queries about F1 Fantasy, or any general questions; we are
+            always willing to help. (UI ONLY)
+        </p>
+
+        <form action="#" method="post">
+            <p>
+                <label for="name">Your name *</label><br />
+                <input id="name" name="name" type="text" required minlength="2" />
+            </p>
+
+            <p>
+                <label for="email">Your email *</label><br />
+                <input id="email" name="email" type="email" required autocomplete="email" />
+            </p>
+
+            <p>
+                <label for="Topic">Topic </label>
+                <select id="Topic" name="topic">
+                    <option>General</option>
+                    <option>F1 Fantasy</option>
+                    <option>Website Suggestions</option>
+                    <option>Other</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="message">Message *</label><br />
+                <textarea id="message" name="message" required minlength="10" rows="6"></textarea>
+            </p>
+
+            <p>
+                <button type="submit">Send</button>
+                <button type="reset">Reset</button>
+            </p>
+
+            <p><small>* required fields</small></p>
+        </form>
+    </main>
+
+    <footer>
+        <hr /> <!-- This outputs a horizontal line-->
+        <p><small>Andre Cini - The Grand Prix Network - Contact</small></p>
+    </footer>
+</body>
+
+</html>

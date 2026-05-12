@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <title>Grand Prix Network | Community Teams</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+
+<body>
+    <header>
+        <h1>Community Teams</h1>
+
+        <input type="checkbox" id="navToggle" class="nav-toggle" />
+        <label for="navToggle" class="nav-toggle-label" aria-label="Toggle navigation">&#9776;</label>
+        
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="communityteams.html" aria-current="page">Community Teams</a></li>
+                <li><a href="form.html">Add Team</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Community Teams</h2>
+        <section class="loading-state" id="loadingState">
+            <div class="spinner"></div>
+            <p>Loading community teams...</p>
+        </section>
+
+        <section class="error-state hidden" id="errorState">
+            <p>⚠️ Unable to load teams. Please try again later.</p>
+            <button onclick="loadTeams()" class="btn">Retry</button>
+        </section>
+
+        <section class="teams-grid hidden" id="teamsGrid">
+            <!-- Teams will be dynamically rendered here -->
+        </section>
+    </main>
+
+    <footer>
+        <hr /> <!-- This outputs a horizontal line-->
+        <p><small>Andre Cini - The Grand Prix Network - Community Teams</small></p>
+    </footer>
+
+    <script src="app.js" defer></script>
+</body>
+
+</html>

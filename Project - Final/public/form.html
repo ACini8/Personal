@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <title>Grand Prix Network | Add Your Team</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>Add Team</h1>
+
+        <input type="checkbox" id="navToggle" class="nav-toggle" />
+        <label for="navToggle" class="nav-toggle-label" aria-label="Toggle navigation">&#9776;</label>
+        
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="communityteams.html">Community Teams</a></li>
+                <li><a href="form.html" aria-current="page">Add Team</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Add your F1 Fantasy Team</h2>
+        <p>Before Submitting, make sure everything is valid and up to date, any spelling mistakes will be fixed by us</p>
+
+        <section class="form-container">
+            <form id="teamForm">
+                <div class="form-group">
+                    <label for="teamName">Team Name *</label>
+                    <input type="text" id="teamName" name="teamName" required minlength="3" maxlength="50">
+                    <small class="error-message" id="teamNameError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="teamCaptain">Team Captain</label>
+                    <input type="text" id="teamCaptain" name="teamCaptain" maxlength="50">
+                    <small class="error-message" id="teamCaptainError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label>Regular Drivers *</label>
+                    <div id="driversContainer">
+                        <input type="text" class="driver-input" placeholder="Driver 1" required>
+                        <input type="text" class="driver-input" placeholder="Driver 2" required>
+                        <input type="text" class="driver-input" placeholder="Driver 3">
+                        <input type="text" class="driver-input" placeholder="Driver 4">
+                    </div>
+                    <small class="error-message" id="driversError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label>Constructors *</label>
+                    <div id="constructorsContainer">
+                        <input type="text" class="constructor-input" placeholder="Constructor 1" required>
+                        <input type="text" class="constructor-input" placeholder="Constructor 2" required>
+                    </div>
+                    <small class="error-message" id="constructorsError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="budget">Budget ($ millions)</label>
+                    <input type="number" id="budget" name="budget" step="0.1" min="0" value="100">
+                    <small class="error-message" id="budgetError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="chip">Power Unit Chip</label>
+                    <select id="chip" name="chip">
+                        <option value="No Chip Used">No Chip Used</option>
+                        <option value="Wildcard">Wildcard</option>
+                        <option value="Limitless">Limitless</option>
+                        <option value="3x">3x</option>
+                        <option value="No Negative">No Negative</option>
+                        <option value="Auto Pilot">Auto Pilot</option>
+                        <option value="Final Fix">Final Fix</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Create Team</button>
+                <div id="formMessage" class="form-message"></div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <hr /> <!-- This outputs a horizontal line-->
+        <p><small>Andre Cini - The Grand Prix Network - Add a Team</small></p>
+    </footer>
+
+    <script src="app.js" defer></script>
+</body>
+</html>

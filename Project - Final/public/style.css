@@ -1,0 +1,773 @@
+/* ================================================
+   style.css — The Grand Prix Network
+   CPS1015
+   ================================================ */
+
+
+/* ================================================
+   BASE
+   box-sizing, custom properties, body defaults
+   ================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary:  #b60202;
+  --color-accent:   #ff8b8b;
+  --color-text:     #333333;
+  --color-bg:       #f4f7f5;
+  --color-header:   #E10600;
+  --color-border:   #cccccc;
+  --color-white:    #ffffff;
+
+  --font-body:      'Inter', sans-serif;
+
+  --space-sm:       12px;
+  --space-md:       24px;
+  --space-lg:       48px;
+
+  --card-bg:        #2D2D2D;
+  --text-light:     #FFFFFF;
+  --accent:         #a31704;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size:   1rem;
+  line-height: 1.5;
+  color:       var(--color-text);
+  background:  var(--color-bg);
+  margin:      0;
+}
+
+
+/* ================================================
+   TYPOGRAPHY
+   headings, links
+   ================================================ */
+
+
+h1 { font-size: 1.75rem; font-weight: 700; margin: 0; }
+h2 { font-size: 1.5rem;  font-weight: 600; }
+h3 { font-size: 1.25rem; font-weight: 600; }
+h4 { font-size: 1.1rem;  font-weight: 600; }
+
+.recap-title{
+  text-align: center;
+  text-decoration: underline;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+
+/* ================================================
+   LAYOUT
+   header, main content area, footer
+   ================================================ */
+
+header {
+  background: linear-gradient(135deg, var(--color-header), #8B0000);
+  color:      var(--color-white);
+  padding:    var(--space-md);
+}
+
+header h1 a {
+  color:           var(--color-white);
+  text-decoration: none;
+}
+
+h1 [aria-current="page"] {
+  text-decoration: underline;
+}
+
+header hr {
+  display: none;
+}
+
+main {
+  max-width: 860px;
+  margin:    0 auto;
+  padding:   var(--space-md);
+}
+
+footer {
+  background: var(--color-text);
+  color:      var(--color-white);
+  padding:    var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+footer hr {
+  display: none;
+}
+
+footer a {
+  color: var(--color-accent);
+}
+
+.social-media{
+  text-align: right;
+}
+
+.social-icon img{
+  width: 32px;
+  height: 32px;
+  mix-blend-mode: multiply;
+  filter: brightness(1.2);
+}
+/* ================================================
+   COMPONENTS
+   nav, article cards, forms
+   ================================================ */
+
+
+nav ul {
+  list-style: none;   /* remove bullets */
+  padding:    0;
+  margin:     var(--space-sm) 0 0 0;
+  display:    flex;   /* lay links out horizontally */
+  gap:        var(--space-md);
+}
+
+nav a {
+  text-decoration: none;
+  color:           var(--color-white);
+  font-weight:     600;
+}
+
+nav a:hover {
+  color: var(--color-accent);
+}
+
+nav [aria-current="page"] {
+  text-decoration: underline;
+}
+
+/* Hamburger Menu */
+.nav-toggle{
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.nav-toggle-label {
+  display: none;
+  color:       var(--color-white);
+  font-size:   1.75rem;
+  cursor:      pointer;
+  user-select: none;
+}
+
+.mobile-only { display: none;}
+.desktop-only {display: block;}
+
+@media (max-width: 768px) {
+  header, 
+  main {
+    padding: 12px;
+  }
+
+  h1 {font-size: 1.4rem;}
+  h2 {font-size: 1.25rem;}
+  h3 {font-size: 1rem;}
+  h4 {font-size: 0.75rem;}
+
+   /* Show the hamburger icon on mobile */
+  .nav-toggle-label {
+    display: block;
+  }
+
+   /* Hide the nav list by default on mobile */
+  nav ul {
+    display:        none;
+    flex-direction: column;
+    gap:            0;
+    align-items:    center;
+  }
+
+  /* The checkbox hack: show the nav when the toggle is checked */
+  .nav-toggle:checked ~ nav ul {
+    display: flex;
+  }
+
+  /* Hide desktop-only and show mobile-only content */
+  .mobile-only  { display: block; }
+  .desktop-only { display: none; }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+
+  nav li {
+    border-bottom: 1px solid var(--color-white);
+    width: 100%;
+    text-align: center;
+    padding-bottom: 8px;
+  }
+
+  nav li:last-child {
+    border-bottom: none;
+  }
+
+  nav a {
+    display: block;
+    padding: 12px 0; /* Adds top/bottom space to reach the 44px goal */
+    width: 100%;
+  }
+}
+
+
+/* The container handles the side-by-side layout */
+.article-container {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap; /* Allows stacking on small mobile screens */
+}
+
+article {
+  background:    var(--color-white);
+  border:        1px solid var(--color-border);
+  border-radius: 12px; /* Smooths the corners*/
+  box-shadow:    0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a soft shadow */
+  padding:       var(--space-md);
+  margin-bottom: var(--space-md);
+  
+  /* This ensures both cards grow to fill equal space */
+  flex: 1 1 300px; 
+  
+  /* Keep content inside the card stacked vertically */
+  display: flex;
+  flex-direction: column; 
+}
+
+article:hover{
+  transform: scale(1.01);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+article img {
+  width:         100%;
+  height:        200px; /* Set a fixed height to keep cards uniform */
+  object-fit:    cover; /* Prevents the image from stretching weirdly */
+  display:       block;
+  margin-bottom: var(--space-sm);
+}
+
+/* Slide 12 — display: block + width 100% on images */
+article img {
+  width:         100%;
+  height:        auto;
+  display:       block;
+  margin-bottom: var(--space-sm);
+}
+
+article hr {
+  display: none;
+}
+
+.article-body{
+  text-align: justify;
+}
+
+.article-details{
+  display: flex;
+  justify-content: space-between;
+  text-decoration: underline;
+  padding: 4px;
+  align-items: center;
+  color:#666;
+}
+
+fieldset {
+  border:        1px solid var(--color-border);
+  padding:       var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+#budgetSlider{
+  accent-color: var(--color-primary);
+  display: flex;
+}
+
+.chip-options{
+  gap:2px 2px;
+}
+
+.form-message{
+  text-decoration: underline;
+  font-style: oblique;
+  font-weight: bold;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+
+.form-group {
+    margin-bottom: 1.5rem;
+    color: var(--color-bg)
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background: #3D3D3D;
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+
+.driver-input,
+.constructor-input {
+    margin-bottom: 0.5rem;
+}
+
+.error-message {
+    color: var(--primary-red);
+    font-size: 0.8rem;
+    display: block;
+    margin-top: 0.25rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-red);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #FF1A00;
+}
+
+.btn-primary {
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.form-message {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.form-message.success {
+    background: #4CAF50;
+}
+
+.form-message.error {
+    background: var(--primary-red);
+}
+
+
+/* Next Race Hub*/
+.race-card {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.race-details {
+    flex: 1;
+}
+
+.race-image {
+    flex: 1;
+}
+
+.race-image img {
+    width: 100%;
+    max-height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+@media (max-width: 700px) {
+    .race-card {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .race-image img {
+        max-height: 220px;
+    }
+}
+
+label {
+  display:       block;
+  font-weight:   600;
+  margin-bottom: 4px;
+}
+
+input,
+select,
+textarea {
+  padding: 8px var(--space-sm);
+  border:  1px solid var(--color-border);
+  width:   100%;
+  font-family: var(--font-body);
+  font-size:   1rem;
+}
+
+button {
+  background:  var(--color-primary);
+  color:       var(--color-white);
+  padding:     8px var(--space-md);
+  border:      none;
+  font-family: var(--font-body);
+  font-size:   1rem;
+  cursor:      pointer;
+}
+
+button:hover {
+  background: var(--color-accent);
+}
+
+
+button[type="reset"] {
+  background: var(--color-white);
+  color:      var(--color-text);
+  border:     1px solid var(--color-border);
+}
+
+button[type="reset"]:hover {
+  background: var(--color-bg);
+}
+
+.split-container{
+  text-align:justify;
+  display: flex;
+  gap:var(--space-md);
+  padding: var(--space-sm);
+  margin-top:var(--space-md);
+  align-items: stretch;
+}
+
+.pick-column{
+  flex: 1; /*Makes both sides exactly equal in width */
+  padding: 0 var(--space-md);
+}
+
+.pick-column + .pick-column{
+  border-left: 2px solid var(--color-primary);
+}
+
+.pick-column h4{
+  text-align: center;
+  text-decoration: underline;
+}
+
+/* Responsive: Stack them vertically on mobile phones */
+@media (max-width: 768px) {
+  .split-container {
+    flex-direction: column;
+  }
+  .pick-column + .pick-column {
+    border-left: none;
+    border-top: 2px solid var(--color-primary);
+    padding-top: var(--space-md);
+  }
+}
+
+/* ================================================
+   UTILITIES
+   small helpers
+   ================================================ */
+
+/* Radio and checkbox labels sit inline next to their input */
+input[type="radio"]    + label,
+input[type="checkbox"] + label {
+  display:     inline;
+  font-weight: normal;
+}
+
+.image-container{
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centres image horizontally*/
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/*To ensure image stays within the container of the mobile */
+.image-container img{
+  max-width: 100%; /*Prevents the image from being wider than the screen*/
+  height: auto; /* Maintains the correct aspect ratio */
+}
+/*===================================================
+  TABLE FOR STANDINGS
+  =================================================== */
+th{
+  background: var(--color-header);
+  font-weight: bold;
+  padding: 4px 8px;
+}
+
+td{
+  text-align: center;
+  padding: 8px 12px;
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+  background: #d2d2d2;
+}
+
+.race-classification {
+    max-width: 820px;
+    background: var(--color-white);
+    border-left: 5px solid var(--color-primary); /* Red F1-style accent */
+    padding: var(--space-sm);
+}
+
+.result-row {
+    display: flex;
+    justify-content: space-between; /* Pushes name left, time right */
+    align-items: center; /* Vertically centres everything in the row*/
+    padding: 10px 0;
+    border-bottom: 1px solid var(--color-border);
+    width: 100%;
+}
+
+/* Column 1: Driver (Align Left) */
+.result-row dt {
+    flex: 2;/* Takes up more space */
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Column 2: Team (Centred) */
+.team-col{
+  flex: 2;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #666;
+  text-transform: uppercase;
+}
+
+/* Column 3: Time (Align Right) */
+.result-row dd {
+    flex: 1; /*Takes up less space */
+    text-align: right;
+    margin: 0;
+    color: var(--color-primary);
+    font-family: monospace; /* Looks like a timing screen */
+    font-weight: 600;
+}
+
+@media (max-width: 480px){
+  .team-col{
+    display:none; /*Hides the middle column on small phones to save space and avoid weird spacing*/
+  }
+  
+  table{
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th{
+    font-size: 0.85rem;
+    padding: 4px 12px
+  }
+
+  td{
+    font-size: 1rem;
+    padding: 6px 10px;
+  }
+}
+
+/* Community Teams Display */
+.hero {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, var(--card-bg), #1A1A1A);
+    border-radius: 20px;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+}
+
+/* Features Grid */
+.features {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    flex: 1;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h2 {
+    margin-bottom: 1rem;
+    color: var(--accent);
+}
+
+/* ------------------------------------------ */
+
+.stats {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--accent);
+    display: block;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+}
+
+/* Teams Grid */
+.page-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.teams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+.team-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-3px);
+}
+
+.team-card h3 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.team-card p {
+    margin: 0.5rem 0;
+    color: var(--color-white);
+}
+
+.team-card strong {
+    color: var(--text-light);
+}
+
+/* ----------------------------------------------- */
+
+.loading-state {
+    text-align: center;
+    padding: 3rem;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--card-bg);
+    border-top-color: var(--primary-red);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.error-state {
+    text-align: center;
+    padding: 3rem;
+    background: rgba(225, 6, 0, 0.2);
+    border-radius: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Fix hamburger visibility */
+input.nav-toggle + .nav-toggle-label {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  input.nav-toggle + .nav-toggle-label {
+    display: block;
+    text-align: left;
+  }
+}

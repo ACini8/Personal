@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Grand Prix Network</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="logo.png">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to The Grand Prix Network!</h1>
+
+        <input type="checkbox" id="navToggle" class="nav-toggle" />
+        <label for="navToggle" class="nav-toggle-label" aria-label="Toggle navigation">&#9776;</label>
+        
+        <nav>
+            <ul>
+                <li><a href="home.html" aria-current="page">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="racerecaps.html">Race Recaps</a></li>
+                <li><a href="standings.html">Standings</a></li>
+                <li><a href="f1fantasy.html">F1 Fantasy</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section aria-labelledby="intro-title">
+            <h2 id="intro-title">Welcome to the World of Formula One</h2>
+            <p>
+                This website allows all Formula 1 fans too indulge in the lastest Formula One
+                news, recaps and to keep up to date with the standings and the upcoming schedule.
+            </p>
+            <p>
+                We also offer F1 Fantasy tips and tricks to win your mini leagues and rise up
+                the global ranks. Suggested line-ups, top picks and projections can all be found
+                on the F1 Fantasy tab.
+            </p>
+            <p>
+                Feel free to <a href="contact.html">Contact Us</a> at any time of the day and we will
+                respond as soon as possible!
+            </p>
+        </section>
+
+        <section aria-labelledby="featured-title">
+            <h3 id="featured-title">Get Started!</h3>
+            <ul>
+                <li>View the latest <a href="standings.html">Championship Standings</a></li>
+                <li>Check out the most recent <a href="news.html">News</a> stories in the paddock</li>
+                <li>Build your personal <a href="f1fantasy.html">F1 Fantasy Team</a> and get tips on how to overtake the
+                    field</li>
+                <li>Missed a race? Fear not view our detailed <a href="racerecaps.html">Race Recaps</a></li>
+            </ul>
+        </section>
+
+        <section class="next-race-hub">
+            <h2>Next Race:</h2>
+
+            <article class="race-card">
+                <div class="race-details">
+                    <h3 id="raceName">Canadian Grand Prix</h3>
+                    <p id="raceDate">Date: 24th of May 2026</p>
+                    <p id="raceCountdown">Loading countdown...</p>
+
+                    <div id="raceWeather">
+                        Loading race weather...
+                    </div>
+                </div>
+
+                <div class="race-image">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzrtMW8E8KYzmNvUxN8TQLLvPIuhNCSI6KTg&s">
+                </div>
+            </article>
+        </section>
+
+        <section aria-labelledby="featured-list">
+            <h3 id="featured-list">View More</h3>
+            <p>Get started with our latest race recap or the most recent piece of news down here:</p>
+
+            <div class="article-container">
+                <article>
+                    <h4><a href="miamigp.html">Miami Grand Prix</a></h4>
+                    <a href="miamigp.html">
+                        <img src="https://d3cm515ijfiu6w.cloudfront.net/wp-content/uploads/2026/05/02172809/f1-2026-miami-gp-sprint.jpg"/>
+                    </a>
+                    <p><a href="miamigp.html">Read More →</a></p>
+                </article>
+
+                <article>
+                    <h4><a href="article2.html">F1 2026 Rule Reset</a></h4>
+                    <a href="article2.html">
+                        <img src="https://newsgpcdn.vshcdn.net/i/images/3179/miami-f1-grand-prix-circuit_f.jpg"
+                        alt="Miami Circuit" width="300" />
+                    </a>
+                    <p><a href="article2.html">Read More →</a></p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <hr /> <!-- This outputs a horizontal line-->
+        <p><small>Andre Cini - The Grand Prix Network - Home</small></p>
+    </footer>
+</body>
+
+</html>

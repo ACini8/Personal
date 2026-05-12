@@ -1,0 +1,34 @@
+[
+    {
+        "teamName": "Andre's Team",
+        "teamCaptain": "Charles Leclerc",
+        "regularDrivers": [
+            "Alexander Albon",
+            "Gabriel Bortoleto",
+            "Esteban Ocon",
+            "Sergio Perez"
+        ],
+        "constructors": [
+            "Mercedes",
+            "Williams"
+        ],
+        "budget": "101",
+        "chip": "No Chip Used"
+    },
+    {
+        "teamName": "b bjh",
+        "teamCaptain": "huiu",
+        "regularDrivers": [
+            "dvdv",
+            "dvsvd",
+            "hfdbdv",
+            "dsvdsv"
+        ],
+        "constructors": [
+            "vd\\v",
+            "\\vsdsv\\d"
+        ],
+        "budget": "100",
+        "chip": "No Chip Used"
+    }
+]
