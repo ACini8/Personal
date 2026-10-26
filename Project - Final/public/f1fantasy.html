@@ -12,13 +12,16 @@
 
 
 <body>
-    <header>
-        <h1>F1 Fantasy</h1>
+    <header class="site-header">
+        <a class="brand" href="home.html">
+            <img class="brand-logo" src="images/logo-badge.png" alt="" width="117" height="44" />
+            <span class="brand-name">The Grand Prix Network</span>
+        </a>
 
         <input type="checkbox" id="navToggle" class="nav-toggle" />
         <label for="navToggle" class="nav-toggle-label" aria-label="Toggle navigation">&#9776;</label>
-        
-        <nav>
+
+        <nav aria-label="Main">
             <ul>
                 <li><a href="home.html">Home</a></li>
                 <li><a href="news.html">News</a></li>
@@ -31,6 +34,8 @@
     </header>
 
     <main>
+        <h1 class="page-title">F1 Fantasy</h1>
+
         <h2>What is F1 Fantasy?</h2>
         <p>F1 Fantasy is a game available on the Formula 1 app, which allows you to pick <strong>5 drivers</strong> and
             <strong>2 teams</strong> with a budget of 100 million euros. Now depending on how these drivers do in a said

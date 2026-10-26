@@ -12,13 +12,16 @@
 </head>
 
 <body>
-    <header>
-        <h1>Welcome to The Grand Prix Network!</h1>
+    <header class="site-header">
+        <a class="brand" href="home.html">
+            <img class="brand-logo" src="images/logo-badge.png" alt="" width="117" height="44" />
+            <span class="brand-name">The Grand Prix Network</span>
+        </a>
 
         <input type="checkbox" id="navToggle" class="nav-toggle" />
         <label for="navToggle" class="nav-toggle-label" aria-label="Toggle navigation">&#9776;</label>
-        
-        <nav>
+
+        <nav aria-label="Main">
             <ul>
                 <li><a href="home.html" aria-current="page">Home</a></li>
                 <li><a href="news.html">News</a></li>
@@ -31,6 +34,8 @@
     </header>
 
     <main>
+        <h1 class="page-title">Welcome to The Grand Prix Network</h1>
+
         <section aria-labelledby="intro-title">
             <h2 id="intro-title">Welcome to the World of Formula One</h2>
             <p>

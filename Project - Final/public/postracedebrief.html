@@ -12,26 +12,29 @@
 
 
 <body>
-    <header>
-        <h1><a href="home.html">Post Race Fantasy Debrief</a></h1>
+    <header class="site-header">
+        <a class="brand" href="home.html">
+            <img class="brand-logo" src="images/logo-badge.png" alt="" width="117" height="44" />
+            <span class="brand-name">The Grand Prix Network</span>
+        </a>
 
         <input type="checkbox" id="navToggle" class="nav-toggle" />
         <label for="navToggle" class="nav-toggle-label" aria-label="Toggle navigation">&#9776;</label>
 
-        <nav>
+        <nav aria-label="Main">
             <ul>
-                <li><a href="home.html" aria-current="page">Home</a></li>
+                <li><a href="home.html">Home</a></li>
                 <li><a href="news.html">News</a></li>
                 <li><a href="racerecaps.html">Race Recaps</a></li>
                 <li><a href="standings.html">Standings</a></li>
-                <li><a href="f1fantasy.html">F1 Fantasy</a></li>
+                <li><a href="f1fantasy.html" aria-current="true">F1 Fantasy</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section aria-labelledby="intro-title">
-            <h2 id="intro-title">Post Race Debrief</h2>
+            <h1 class="page-title" id="intro-title">Post Race Fantasy Debrief</h1>
         </section>
         <p>
             Check the articles down below to see a full debrief of how the latest races changed the landscape
