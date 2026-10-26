@@ -5,7 +5,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>F1 Fantasy - Post Race Debrief</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="logo.png">
 </head>
@@ -32,31 +34,56 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <section aria-labelledby="intro-title">
-            <h1 class="page-title" id="intro-title">Post Race Fantasy Debrief</h1>
-        </section>
-        <p>
-            Check the articles down below to see a full debrief of how the latest races changed the landscape
-            of F1 Fantasy moving forward.
+    <main class="wide">
+        <h1 class="page-title" id="intro-title">Post Race Fantasy Debrief</h1>
+        <p class="page-intro">
+            A full debrief of how the latest races changed the landscape of F1 Fantasy moving forward.
         </p>
 
-        <div class="article-container">
-            <article>
-                <h4><a href="miamiprfd.html">Miami - Post Race Fantasy Debrief</a></h4>
-                <a href="miamiprfd.html">
-                    <img src="https://speedcafe.b-cdn.net/wp-content/uploads/2026/05/XPB_1408975_HiRes.jpg"
-                    alt="Podium at the 2026 Miami Grand Prix" />
+        <section aria-labelledby="list-title">
+            <h2 id="list-title">Latest debriefs</h2>
+            <div class="card-grid">
+                <a class="card" href="miamiprfd.html">
+                    <div class="card-image">
+                        <img src="images/the-podium-at-the-2026-miami-grand-prix.webp"
+                            alt="The podium at the 2026 Miami Grand Prix" />
+                    </div>
+                    <p class="card-tag">F1 Fantasy</p>
+                    <h3 class="card-title">Miami – Post Race Fantasy Debrief</h3>
+                    <p class="card-meta">Where our Miami picks paid off and where they missed</p>
                 </a>
-                <p><a href="miamiprfd.html">Read More →</a></p>
-            </article>
-        </div>
+            </div>
+        </section>
     </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <a class="brand footer-brand" href="home.html">
+                <img class="brand-logo" src="images/logo-badge.png" alt="" width="117" height="44" />
+                <span class="brand-name">The Grand Prix Network</span>
+            </a>
+
+            <nav class="footer-nav" aria-label="Footer">
+                <ul>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="racerecaps.html">Race Recaps</a></li>
+                    <li><a href="standings.html">Standings</a></li>
+                    <li><a href="f1fantasy.html">F1 Fantasy</a></li>
+                    <li><a href="communityteams.html">Community Teams</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Instagram: put your account URL in the href, then remove these two comment lines.
+            <a class="footer-social" href="https://www.instagram.com/YOUR-ACCOUNT/">
+                <img src="images/instagramlogo.png" alt="" width="29" height="20" />
+                <span>Follow us on Instagram</span>
+            </a>
+            -->
+        </div>
+        <p class="footer-legal">&copy; 2026 Andre Cini. An independent fan site, not affiliated with Formula 1.</p>
+    </footer>
 </body>
 
-<footer>
-    <hr />
-    <p><small>Andre Cini - The Grand Prix Network - Post Race Debriefs</small></p>
-</footer>
 
 </html>

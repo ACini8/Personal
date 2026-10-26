@@ -26,16 +26,20 @@ function setupHomePage() {
 
     if (!raceNameElement || !raceDateElement || !raceCountdownElement || !raceWeatherElement) return;
 
+    // Source: formula1.com timetable. Race start is 14:00 local in Mexico City (UTC-6),
+    // written in UTC (the "Z") so the countdown is right in every visitor's time zone.
     const nextRace = {
-        name: 'Canadian Grand Prix',
-        date: '2026-05-24T22:00:00',
-        location: 'Montreal',
-        lat: 45.5088,
-        long: -73.5878
+        name: 'Mexico City Grand Prix',
+        date: '2026-11-01T20:00:00Z',
+        dateLabel: 'Sunday 1 November 2026, 14:00 local time',
+        circuit: 'Autódromo Hermanos Rodríguez',
+        location: 'Mexico City',
+        lat: 19.4042,
+        long: -99.0907
     };
 
     raceNameElement.textContent = nextRace.name;
-    raceDateElement.textContent = 'Date: 24th of May 2026';
+    raceDateElement.textContent = nextRace.dateLabel;
 
     function updateCountdown() {
         const raceDate = new Date(nextRace.date);
@@ -51,11 +55,19 @@ function setupHomePage() {
         const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
         const minutes = Math.floor((diff / (1000 * 60)) % 60);
 
-        raceCountdownElement.textContent = `${days} days, ${hours} hours, ${minutes} minutes to go`;
+        // Each number gets its own element so the CSS can show it like a timing board
+        raceCountdownElement.innerHTML = `
+            <span class="countdown-unit"><strong>${days}</strong> ${days === 1 ? 'day' : 'days'}</span>
+            <span class="countdown-unit"><strong>${hours}</strong> ${hours === 1 ? 'hour' : 'hours'}</span>
+            <span class="countdown-unit"><strong>${minutes}</strong> min</span>
+            <span class="countdown-label">to lights out</span>
+        `;
     }
 
     updateCountdown();
     setInterval(updateCountdown, 60000);
+
+    showSessionTimesInVisitorTimeZone();
 
     loadRaceWeather(nextRace, raceWeatherElement);
 }
@@ -76,14 +88,31 @@ async function loadRaceWeather(nextRace, raceWeatherElement) {
         const current = data.current;
 
         raceWeatherElement.innerHTML = `
-            <h4>Weather in ${nextRace.location}</h4>
-            <p><strong>Temperature:</strong> ${current.temperature_2m}°C</p>
-            <p><strong>Precipitation:</strong> ${current.precipitation} mm</p>
-            <p><strong>Wind speed:</strong> ${current.wind_speed_10m} km/h</p>
+            <p class="weather-title">Weather now in ${nextRace.location}</p>
+            <dl class="weather-list">
+                <div><dt>Temperature</dt><dd>${current.temperature_2m}°C</dd></div>
+                <div><dt>Rain</dt><dd>${current.precipitation} mm</dd></div>
+                <div><dt>Wind</dt><dd>${current.wind_speed_10m} km/h</dd></div>
+            </dl>
         `;
     } catch (error) {
-        raceWeatherElement.textContent = 'Could not load race weather.';
+        raceWeatherElement.textContent = 'Weather is unavailable right now. Refresh the page to try again.';
     }
+}
+
+// Fills the "Your time" column of the weekend schedule using the visitor's own time zone.
+function showSessionTimesInVisitorTimeZone() {
+    const cells = document.querySelectorAll('[data-session-utc]');
+    const format = new Intl.DateTimeFormat(undefined, {
+        weekday: 'short',
+        hour: '2-digit',
+        minute: '2-digit'
+    });
+
+    cells.forEach(function (cell) {
+        const sessionStart = new Date(cell.dataset.sessionUtc);
+        cell.textContent = format.format(sessionStart);
+    });
 }
 
 function setupCommunityTeamsPage() {

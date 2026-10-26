@@ -5,7 +5,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Miami - Post Race Fantasy Debrief</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="logo.png">
 </head>
@@ -32,20 +34,18 @@
         </nav>
     </header>
 
-    <main>
-        <p><a href="postracedebrief.html"> ← Back</a></p>
-        <div class="recap-title">
+    <main class="reading">
+        <p class="back-link"><a href="postracedebrief.html">← Back to Post Race Debrief</a></p>
+        <header class="story-header">
             <h1 class="page-title">Miami – Post Race Fantasy Debrief</h1>
-        </div>
-        <div class="article-details">
-            <span><strong>Andre Cini</strong></span>
-            <span><strong>16th of March 2026</strong></span>
-        </div>
-        <div class="image-container">
-            <img src="https://cdnph.upi.com/collection/fp/upi/16501/9aae6e3aab20b6c9819ea2646bcda2b2/Andrea-Kimi-Antonelli-wins-Formula-1-Miami-Grand-Prix_1_1.jpg"
-                alt="Kimi Antonelli lifting the P1 Trophy" width="800" />
-        </div>
-
+            <p class="byline">
+                <span>By Andre Cini</span>
+                <time datetime="2026-03-16">16 March 2026</time>
+            </p>
+        </header>
+        <figure class="story-image">
+            <img src="https://cdnph.upi.com/collection/fp/upi/16501/9aae6e3aab20b6c9819ea2646bcda2b2/Andrea-Kimi-Antonelli-wins-Formula-1-Miami-Grand-Prix_1_1.jpg" alt="Kimi Antonelli lifting the P1 Trophy" />
+        </figure>
         <div class="article-body">
             <p>
                 The Miami GP has come and gone, and for F1 Fantasy players, this was one of those weekends that reminded
@@ -58,7 +58,7 @@
                 in and who to avoid, today we will be looking further into this and seeing where
                 we went right and where we missed the mark.
             </p>
-            <h3>The Hits: </h3>
+            <h2>The Hits: </h2>
             <ul>
                 <li>
                     <strong>Kimi Antonelli: </strong>We said it before and we'll say it again <strong>the kid is a cheat
@@ -89,7 +89,7 @@
                     I wouldn't give up on Ferrari just yet.
                 </li>
             </ul>
-            <h3>The Misses:</h3>
+            <h2>The Misses:</h2>
             <p>
                 Unfortunately, due to the chaotic nature of this weekend, their were more misses then hits on our end,
                 which we apologize for, whether it was recommendations that
@@ -116,7 +116,7 @@
                     anyone's investments list yet as they still had a negative return in Suzuka.
                 </li>
             </ul>
-            <h3>What to expect moving forward</h3>
+            <h2>What to expect moving forward</h2>
             <p>
                 After Miami, the biggest fantasy takeaway is simple: McLaren are back in the conversation. Their double
                 podium in the Sprint and Grand Prix shows that they are no longer just a good option,
@@ -130,9 +130,33 @@
         </div>
     </main>
 
-    <footer>
-        <hr /> <!-- This outputs a horizontal line-->
-        <p><small>Andre Cini - The Grand Prix Network - News</small></p>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <a class="brand footer-brand" href="home.html">
+                <img class="brand-logo" src="images/logo-badge.png" alt="" width="117" height="44" />
+                <span class="brand-name">The Grand Prix Network</span>
+            </a>
+
+            <nav class="footer-nav" aria-label="Footer">
+                <ul>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="racerecaps.html">Race Recaps</a></li>
+                    <li><a href="standings.html">Standings</a></li>
+                    <li><a href="f1fantasy.html">F1 Fantasy</a></li>
+                    <li><a href="communityteams.html">Community Teams</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Instagram: put your account URL in the href, then remove these two comment lines.
+            <a class="footer-social" href="https://www.instagram.com/YOUR-ACCOUNT/">
+                <img src="images/instagramlogo.png" alt="" width="29" height="20" />
+                <span>Follow us on Instagram</span>
+            </a>
+            -->
+        </div>
+        <p class="footer-legal">&copy; 2026 Andre Cini. An independent fan site, not affiliated with Formula 1.</p>
     </footer>
 </body>
 

@@ -5,7 +5,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>F1 Fantasy</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="logo.png">
 </head>
@@ -33,62 +35,92 @@
         </nav>
     </header>
 
-    <main>
+    <main class="wide">
         <h1 class="page-title">F1 Fantasy</h1>
 
-        <h2>What is F1 Fantasy?</h2>
-        <p>F1 Fantasy is a game available on the Formula 1 app, which allows you to pick <strong>5 drivers</strong> and
-            <strong>2 teams</strong> with a budget of 100 million euros. Now depending on how these drivers do in a said
-            grand prix
-            weekend, you will get points correlating to their performance.
-        </p>
+        <section class="fantasy-intro" aria-labelledby="what-title">
+            <h2 id="what-title">What is F1 Fantasy?</h2>
+            <p>F1 Fantasy is a game available on the Formula 1 app, which allows you to pick <strong>5 drivers</strong> and
+                <strong>2 teams</strong> with a budget of 100 million euros. Depending on how these drivers do in a
+                Grand Prix weekend, you will get points based on their performance.
+            </p>
+            <p>
+                Last year over 1.5 million users took part, and the overall winner gets prizes such as <strong>2x
+                Paddock Pass Weekend Tickets</strong> to any Grand Prix of the winner's choosing!
+                You can create mini leagues with your friends and compete with one another, or you can join the
+                <a href="https://fantasy.formula1.com/en/leagues/leaderboard/private/2609006">TGPN Mini-League</a>,
+                where the winner will get a £50 gift card to the F1 gift shop!
+            </p>
+        </section>
 
-        <p>
-            Last year over 1.5 million users participated, and the grand winner gets awesome prizes such as <strong> 2x
-                Paddock Pass Weekend Tickets</strong> to any Grand Prix od the winner's choosing!
-            You can create mini leagues with your friends and compete with one another, or you can join the <a
-                href="https://fantasy.formula1.com/en/leagues/leaderboard/private/2609006">TGPN Mini-League</a>
-            where the winner will get a £50 gift card to the F1 gift shop!
-        </p>
+        <section aria-labelledby="list-title">
+            <h2 id="list-title">What we offer</h2>
+            <div class="card-grid">
+                <a class="card" href="topchoices.html">
+                    <div class="card-image">
+                        <img src="images/several-f1-drivers-shown-on-an-f1-fantasy-graphic.avif"
+                            alt="Several F1 drivers shown on an F1 Fantasy graphic" />
+                    </div>
+                    <p class="card-tag">Before the race</p>
+                    <h3 class="card-title">Top F1 Fantasy Choices</h3>
+                    <p class="card-meta">Who to buy and who to avoid each weekend</p>
+                </a>
 
-        <section aria-labelledby="featured-list">
-            <h3 id="list-title">What we offer:</h3>
-            <p>We offer a variety of F1 Fantasy Services;</p>
-            <div class="article-container">
-                <article>
-                    <h4><a href="topchoices.html">Top F1 Fantasy Choices</a></h4>
-                    <a href="topchoices.html">
-                        <img src="https://media.formula1.com/image/upload/t_16by9Centre/c_lfill,w_2048/q_auto/v1740000001/fom-website/2025/F1%20Fantasy/Multi-DriverTemplateV1_539811_1920x1080.webp"
-                        alt="F1-Fantasy Cover" />
-                    </a>
-                </article>
+                <a class="card" href="postracedebrief.html">
+                    <div class="card-image">
+                        <img src="images/race-day-at-the-2025-italian-grand-prix-at-monza.jpg"
+                            alt="Race day at the 2025 Italian Grand Prix at Monza" />
+                    </div>
+                    <p class="card-tag">After the race</p>
+                    <h3 class="card-title">Post Race Fantasy Debrief</h3>
+                    <p class="card-meta">How each race changed the fantasy picture</p>
+                </a>
 
-                <article>
-                    <h4><a href="postracedebrief.html">Post Race Fantasy Debrief</a></h4>
-                    <a href="postracedebrief.html">
-                        <img src="https://chrisnevephoto.com/wp-content/uploads/2025/09/Italian-GP-Monza-2025-Day-3-Sunday-1707-1536x1024.jpg"
-                        alt="Italian Grand Prix 2025" />
-                    </a>
-                </article>
-
-                <article>
-                    <h4><a href="communityteams.html">Community Teams</a></h4>
-                    <a href="communityteams.html">
-                        <img src="https://a1.espncdn.com/combiner/i?img=%2Fphoto%2F2025%2F0723%2Fr1522497_1296x729_16%2D9.jpg"
-                        alt="Spa 2025 Eau Rouge" />
-                    </a>
-                </article>
+                <a class="card" href="communityteams.html">
+                    <div class="card-image">
+                        <img src="images/cars-climbing-eau-rouge-at-spa-in-2025.jpg"
+                            alt="Cars climbing Eau Rouge at Spa in 2025" />
+                    </div>
+                    <p class="card-tag">Community</p>
+                    <h3 class="card-title">Community Teams</h3>
+                    <p class="card-meta">See other readers' teams and add your own</p>
+                </a>
             </div>
         </section>
-        <p>Further information can be found in the web-pages themselves, if you still have inquiries,
-            feel free to go to our <a href="contact.html">Contact Page</a> to send us any questions you
-            may have about F1 Fantasy. Good Luck and let's go racing!
+
+        <p class="page-intro">
+            Further information can be found on the pages themselves. If you still have questions about F1 Fantasy,
+            send them through our <a href="contact.html">contact page</a>. Good luck, and let's go racing!
         </p>
     </main>
 
-    <footer>
-        <hr /> <!-- This outputs a horizontal line-->
-        <p><small>Andre Cini - The Grand Prix Network - F1 Fantasy</small></p>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <a class="brand footer-brand" href="home.html">
+                <img class="brand-logo" src="images/logo-badge.png" alt="" width="117" height="44" />
+                <span class="brand-name">The Grand Prix Network</span>
+            </a>
+
+            <nav class="footer-nav" aria-label="Footer">
+                <ul>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="racerecaps.html">Race Recaps</a></li>
+                    <li><a href="standings.html">Standings</a></li>
+                    <li><a href="f1fantasy.html">F1 Fantasy</a></li>
+                    <li><a href="communityteams.html">Community Teams</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Instagram: put your account URL in the href, then remove these two comment lines.
+            <a class="footer-social" href="https://www.instagram.com/YOUR-ACCOUNT/">
+                <img src="images/instagramlogo.png" alt="" width="29" height="20" />
+                <span>Follow us on Instagram</span>
+            </a>
+            -->
+        </div>
+        <p class="footer-legal">&copy; 2026 Andre Cini. An independent fan site, not affiliated with Formula 1.</p>
     </footer>
 </body>
 

@@ -5,7 +5,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Race Recaps</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="logo.png">
 </head>
@@ -33,88 +35,102 @@
         </nav>
     </header>
 
-    <main>
+    <main class="wide">
         <h1 class="page-title">Race Recaps</h1>
-
-        <h2>Missed the Race?</h2>
-        <p>
-            Click on the race you missed for a detailed debrief on what happened
-            on the track, covering all the details from FP1 to the final lap.
+        <p class="page-intro">
+            Missed the race? Pick the one you missed for a detailed debrief of what happened on the track,
+            covering everything from FP1 to the final lap.
         </p>
 
         <section aria-labelledby="list-title">
-            <h3 id="list-title">Races:</h3>
+            <h2 class="visually-hidden" id="list-title">Races</h2>
+            <div class="card-grid">
+                <a class="card" href="miamigp.html">
+                    <div class="card-image">
+                        <img src="images/cars-racing-through-the-first-corner-at-the-2026-miami-grand.jpg"
+                            alt="Cars racing through the first corner at the 2026 Miami Grand Prix" />
+                    </div>
+                    <p class="card-tag">Round 4</p>
+                    <h3 class="card-title">Miami Grand Prix</h3>
+                    <p class="card-meta"><time datetime="2026-05-04">4 May 2026</time></p>
+                    <div class="card-text">
+                        <p class="card-stats"><span><strong>Winner</strong> Andrea Kimi Antonelli</span><span><strong>Fastest lap</strong> Lando Norris</span></p>
+                        <ul><li>Sprint race debrief</li><li>A change in the pecking order</li><li>Gasly major crash</li><li>Ferrari on the back foot</li></ul>
+                    </div>
+                </a>
 
-            <article>
-                <h4><a href="miamigp.html">Miami Grand Prix</a></h4>
-                <a href="miamigp.html">
-                    <img src="https://d3cm515ijfiu6w.cloudfront.net/wp-content/uploads/2026/05/02172809/f1-2026-miami-gp-sprint.jpg"/>
+                <a class="card" href="japangp.html">
+                    <div class="card-image">
+                        <img src="suzukat1.png"
+                            alt="The field heading into Turn 1 at Suzuka" />
+                    </div>
+                    <p class="card-tag">Round 3</p>
+                    <h3 class="card-title">Japanese Grand Prix</h3>
+                    <p class="card-meta"><time datetime="2026-03-30">30 March 2026</time></p>
+                    <div class="card-text">
+                        <p class="card-stats"><span><strong>Winner</strong> Andrea Kimi Antonelli</span><span><strong>Fastest lap</strong> Andrea Kimi Antonelli</span></p>
+                        <ul><li>New championship leader</li><li>Piastri back with a bang</li><li>Bearman crash causes major discussions</li></ul>
+                    </div>
                 </a>
-                <p><strong>Race Winner:</strong> Andrea Kimi Antonelli | <strong>Fastest Lap:</strong> Lando Norris</p>
-                <p><strong>Headlines: </strong></p>
-                <ul>
-                    <li>Sprint race debrief</li>
-                    <li>A change in the pecking order</li>
-                    <li>Gasly major crash</li>
-                    <li>Ferrari on the back foot</li>
-                </ul>
-                <p><a href="miamigp.html">Read More →</a></p>
-            </article>
-            <article>
-                <h4><a href="japangp.html">Japanese Grand Prix</a></h4>
-                <a href="japangp.html">
-                    <img src="suzukat1.png" alt="Turn 1 Suzuka" width="300">
-                </a>
-                <p><strong>Race Winner: </strong> Andrea Kimi Antonelli | <strong>Fastest Lap: </strong> Andrea Kimi
-                    Antonelli</p>
-                <p><strong>Headlines: </strong></p>
-                <ul>
-                    <li>New Championship Leader</li>
-                    <li>Piastri back with a bang</li>
-                    <li>Bearman crash causes major discussions</li>
-                </ul>
-                <p><a href="japangp.html">Read More →</a></p>
-            </article>
 
-            <article>
-                <h4><a href="chinagp.html">Chinese Grand Prix</a></h4>
-                <a href="chinagp.html">
-                    <img src="https://heavy.com/wp-content/uploads/2026/03/GettyImages-2266396848-e1773557857256.jpg?quality=65&strip=all&w=780"
-                    alt="Opening Lap Battles at the Chinese GP" width="300" />
+                <a class="card" href="chinagp.html">
+                    <div class="card-image">
+                        <img src="images/opening-lap-battles-at-the-2026-chinese-grand-prix.webp"
+                            alt="Opening lap battles at the 2026 Chinese Grand Prix" />
+                    </div>
+                    <p class="card-tag">Round 2</p>
+                    <h3 class="card-title">Chinese Grand Prix</h3>
+                    <p class="card-meta"><time datetime="2026-03-16">16 March 2026</time></p>
+                    <div class="card-text">
+                        <p class="card-stats"><span><strong>Winner</strong> Andrea Kimi Antonelli</span><span><strong>Fastest lap</strong> Andrea Kimi Antonelli</span></p>
+                        <ul><li>Sprint race debrief</li><li>Mercedes maintain perfection</li><li>Hamilton's first Grand Prix podium in red</li><li>McLaren double DNS</li></ul>
+                    </div>
                 </a>
-                <p><strong>Race Winner :</strong> Andrea Kimi Antonelli | <strong>Fastest Lap :</strong> Andrea Kimi
-                    Antonelli</p>
-                <p><strong>Headlines: </strong></p>
-                <ul>
-                    <li>Sprint race debrief</li>
-                    <li>Mercedes maintain perfection</li>
-                    <li>Hamilton First Grand Prix Podium in red</li>
-                    <li>McLaren Double DNS</li>
-                </ul>
-                <p><a href="chinagp.html">Read More </a></p>
-            </article>
 
-            <article>
-                <h4><a href="ausgp.html">Australian Grand Prix</a></h4>
-                <a href="ausgp.html">
-                    <img src="https://www.the-race.com/content/images/size/w1200/2026/03/XPB_1399895_HiRes.jpg"
-                    alt="Opening Lap Battles at the Chinese GP" width="300" />
+                <a class="card" href="ausgp.html">
+                    <div class="card-image">
+                        <img src="images/the-start-of-the-2026-australian-grand-prix-in-melbourne.jpg"
+                            alt="The start of the 2026 Australian Grand Prix in Melbourne" />
+                    </div>
+                    <p class="card-tag">Round 1</p>
+                    <h3 class="card-title">Australian Grand Prix</h3>
+                    <p class="card-meta"><time datetime="2026-03-09">9 March 2026</time></p>
+                    <div class="card-text">
+                        <p class="card-stats"><span><strong>Winner</strong> George Russell</span><span><strong>Fastest lap</strong> Max Verstappen</span></p>
+                        <ul><li>Mercedes déjà vu</li><li>Norris struggles in his first championship defence</li><li>Ferrari can fight again</li></ul>
+                    </div>
                 </a>
-                <p><strong>Race Winner :</strong> George Russell | <strong>Fastest Lap :</strong> Max Verstappen</p>
-                <p><strong>Headlines: </strong></p>
-                <ul>
-                    <li>Mercedes Deja-Vu</li>
-                    <li>Norris struggles in first championship defense race</li>
-                    <li>Ferrari can fight again</li>
-                </ul>
-                <p><a href="ausgp.html">Read More →</a></p>
-            </article>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <hr /> <!-- This outputs a horizontal line-->
-        <p><small>Andre Cini - The Grand Prix Network - Race Recaps</small></p>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <a class="brand footer-brand" href="home.html">
+                <img class="brand-logo" src="images/logo-badge.png" alt="" width="117" height="44" />
+                <span class="brand-name">The Grand Prix Network</span>
+            </a>
+
+            <nav class="footer-nav" aria-label="Footer">
+                <ul>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="racerecaps.html">Race Recaps</a></li>
+                    <li><a href="standings.html">Standings</a></li>
+                    <li><a href="f1fantasy.html">F1 Fantasy</a></li>
+                    <li><a href="communityteams.html">Community Teams</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Instagram: put your account URL in the href, then remove these two comment lines.
+            <a class="footer-social" href="https://www.instagram.com/YOUR-ACCOUNT/">
+                <img src="images/instagramlogo.png" alt="" width="29" height="20" />
+                <span>Follow us on Instagram</span>
+            </a>
+            -->
+        </div>
+        <p class="footer-legal">&copy; 2026 Andre Cini. An independent fan site, not affiliated with Formula 1.</p>
     </footer>
 </body>
 

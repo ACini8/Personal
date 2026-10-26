@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <title>Grand Prix Network | Community Teams</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="logo.png">
@@ -50,12 +52,36 @@
         </section>
     </main>
 
-    <footer>
-        <hr /> <!-- This outputs a horizontal line-->
-        <p><small>Andre Cini - The Grand Prix Network - Community Teams</small></p>
-    </footer>
 
     <script src="app.js" defer></script>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <a class="brand footer-brand" href="home.html">
+                <img class="brand-logo" src="images/logo-badge.png" alt="" width="117" height="44" />
+                <span class="brand-name">The Grand Prix Network</span>
+            </a>
+
+            <nav class="footer-nav" aria-label="Footer">
+                <ul>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="racerecaps.html">Race Recaps</a></li>
+                    <li><a href="standings.html">Standings</a></li>
+                    <li><a href="f1fantasy.html">F1 Fantasy</a></li>
+                    <li><a href="communityteams.html">Community Teams</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Instagram: put your account URL in the href, then remove these two comment lines.
+            <a class="footer-social" href="https://www.instagram.com/YOUR-ACCOUNT/">
+                <img src="images/instagramlogo.png" alt="" width="29" height="20" />
+                <span>Follow us on Instagram</span>
+            </a>
+            -->
+        </div>
+        <p class="footer-legal">&copy; 2026 Andre Cini. An independent fan site, not affiliated with Formula 1.</p>
+    </footer>
 </body>
 
 </html>

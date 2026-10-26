@@ -5,7 +5,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Contact Us</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="logo.png">
 </head>
@@ -35,53 +37,73 @@
 
     <main>
         <h1 class="page-title">Contact Us</h1>
-
-        <h2>Send Us an Email</h2>
-
-        <p>
-            Fill in the form below and ask us whatever inquiries you may have, whethere it is
-            suggestions on the website, queries about F1 Fantasy, or any general questions; we are
-            always willing to help. (UI ONLY)
+        <p class="page-intro">
+            Ask us anything: suggestions for the website, questions about F1 Fantasy, or anything else.
+            We are always happy to help.
         </p>
 
-        <form action="#" method="post">
-            <p>
-                <label for="name">Your name *</label><br />
-                <input id="name" name="name" type="text" required minlength="2" />
-            </p>
+        <section class="form-container" aria-labelledby="form-title">
+            <h2 id="form-title">Send us an email</h2>
+            <p class="form-note">This form is a design demo (UI only), so messages aren't sent yet.</p>
 
-            <p>
-                <label for="email">Your email *</label><br />
-                <input id="email" name="email" type="email" required autocomplete="email" />
-            </p>
-
-            <p>
-                <label for="Topic">Topic </label>
-                <select id="Topic" name="topic">
-                    <option>General</option>
-                    <option>F1 Fantasy</option>
-                    <option>Website Suggestions</option>
-                    <option>Other</option>
-                </select>
-            </p>
-
-            <p>
-                <label for="message">Message *</label><br />
-                <textarea id="message" name="message" required minlength="10" rows="6"></textarea>
-            </p>
-
-            <p>
-                <button type="submit">Send</button>
-                <button type="reset">Reset</button>
-            </p>
-
-            <p><small>* required fields</small></p>
-        </form>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Your name *</label>
+                    <input id="name" name="name" type="text" required minlength="2" autocomplete="name" />
+                </div>
+                <div class="form-group">
+                    <label for="email">Your email *</label>
+                    <input id="email" name="email" type="email" required autocomplete="email" />
+                </div>
+                <div class="form-group">
+                    <label for="Topic">Topic</label>
+                    <select id="Topic" name="topic">
+                        <option>General</option>
+                        <option>F1 Fantasy</option>
+                        <option>Website Suggestions</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required minlength="10" rows="6"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit">Send message</button>
+                    <button type="reset">Clear form</button>
+                </div>
+                <p class="form-note">* required fields</p>
+            </form>
+        </section>
     </main>
 
-    <footer>
-        <hr /> <!-- This outputs a horizontal line-->
-        <p><small>Andre Cini - The Grand Prix Network - Contact</small></p>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <a class="brand footer-brand" href="home.html">
+                <img class="brand-logo" src="images/logo-badge.png" alt="" width="117" height="44" />
+                <span class="brand-name">The Grand Prix Network</span>
+            </a>
+
+            <nav class="footer-nav" aria-label="Footer">
+                <ul>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="racerecaps.html">Race Recaps</a></li>
+                    <li><a href="standings.html">Standings</a></li>
+                    <li><a href="f1fantasy.html">F1 Fantasy</a></li>
+                    <li><a href="communityteams.html">Community Teams</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Instagram: put your account URL in the href, then remove these two comment lines.
+            <a class="footer-social" href="https://www.instagram.com/YOUR-ACCOUNT/">
+                <img src="images/instagramlogo.png" alt="" width="29" height="20" />
+                <span>Follow us on Instagram</span>
+            </a>
+            -->
+        </div>
+        <p class="footer-legal">&copy; 2026 Andre Cini. An independent fan site, not affiliated with Formula 1.</p>
     </footer>
 </body>
 

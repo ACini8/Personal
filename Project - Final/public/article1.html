@@ -5,7 +5,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bahrain and Saudi GP's Cancelled</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="logo.png">
 </head>
@@ -32,20 +34,18 @@
         </nav>
     </header>
 
-    <main>
-        <p><a href="news.html"> ← Back</a></p>
-        <div class="recap-title">
+    <main class="reading">
+        <p class="back-link"><a href="news.html">← Back to News</a></p>
+        <header class="story-header">
             <h1 class="page-title">Bahrain and Saudi Arabia GPs Cancelled</h1>
-        </div>
-        <div class="article-details">
-            <span><strong>Andre Cini</strong></span>
-            <span><strong>14th of March 2026</strong></span>
-        </div>
-        <div class="image-container">
-            <img src="https://www.f1-fansite.com/wp-content/uploads/2025/05/SI202504130554-Aangepast.jpg"
-                alt="Bahrain Grand Prix 2025" width="800" />
-        </div>
-
+            <p class="byline">
+                <span>By Andre Cini</span>
+                <time datetime="2026-03-14">14 March 2026</time>
+            </p>
+        </header>
+        <figure class="story-image">
+            <img src="images/bahrain-grand-prix-2025.jpg" alt="Bahrain Grand Prix 2025" />
+        </figure>
         <div class="article-body">
             <p>
                 Amid the ongoing dispute and tensions rising in the middle east, the FIA have confirmed that <strong>the
@@ -57,7 +57,7 @@
                 special and I hope we can return
                 to the region as soon as circumstances allow."
             </p>
-            <h3>How does this affect the 2026 F1 Season?</h3>
+            <h2>How does this affect the 2026 F1 Season?</h2>
             <p>
                 The unprecedented cancellation of two consecutive rounds throws a massive wrench into the
                 logistical and competitive flow of the 2026 season.
@@ -89,7 +89,7 @@
                 </li>
             </ul>
 
-            <h3>Miami and the Ultimate Active Aero Test</h3>
+            <h2>Miami and the Ultimate Active Aero Test</h2>
             <p>
                 With the calendar suddenly fast-forwarding to the Sunshine State, the Miami Grand Prix takes on
                 amplified importance.
@@ -102,7 +102,7 @@
                 will be the ultimate proving ground for the 2026 technical regulations.
             </p>
 
-            <h3>Are Replacements on the Horizon?</h3>
+            <h2>Are Replacements on the Horizon?</h2>
             <p>
                 Replacing two Grands Prix on mere weeks of notice is virtually impossible due
                 to the lead times required for track homologation, ticketing, and city infrastructure.
@@ -140,9 +140,33 @@
         </div>
     </main>
 
-    <footer>
-        <hr /> <!-- This outputs a horizontal line-->
-        <p><small>Andre Cini - The Grand Prix Network - Bahrain and Saudi GP's Cancelled</small></p>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <a class="brand footer-brand" href="home.html">
+                <img class="brand-logo" src="images/logo-badge.png" alt="" width="117" height="44" />
+                <span class="brand-name">The Grand Prix Network</span>
+            </a>
+
+            <nav class="footer-nav" aria-label="Footer">
+                <ul>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="racerecaps.html">Race Recaps</a></li>
+                    <li><a href="standings.html">Standings</a></li>
+                    <li><a href="f1fantasy.html">F1 Fantasy</a></li>
+                    <li><a href="communityteams.html">Community Teams</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Instagram: put your account URL in the href, then remove these two comment lines.
+            <a class="footer-social" href="https://www.instagram.com/YOUR-ACCOUNT/">
+                <img src="images/instagramlogo.png" alt="" width="29" height="20" />
+                <span>Follow us on Instagram</span>
+            </a>
+            -->
+        </div>
+        <p class="footer-legal">&copy; 2026 Andre Cini. An independent fan site, not affiliated with Formula 1.</p>
     </footer>
 </body>
 

@@ -5,7 +5,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>News</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="logo.png">
 </head>
@@ -33,67 +35,71 @@
         </nav>
     </header>
 
-    <main>
+    <main class="wide">
         <h1 class="page-title">News</h1>
-
-        <h2>News Articles</h2>
-        <p>
-            Read the latest and most important news that revolves the
-            world of Formula 1. Whether it's on the track, or rumors in
-            the paddock, we've got you covered and in the loop!
+        <p class="page-intro">
+            Read the latest and most important news that revolves around the world of Formula 1.
+            Whether it's on the track or rumours in the paddock, we've got you covered and in the loop!
         </p>
 
         <section aria-labelledby="list-title">
-            <h3 id="list-title">Top Stories:</h3>
-
-            <article>
-                <h4><a href="article2.html">F1’s 2026 Rule Reset: The Technical Changes Arriving at the Miami Grand
-                        Prix</a></h4>
-                <a href="article2.html">
-                    <img src="https://newsgpcdn.vshcdn.net/i/images/3179/miami-f1-grand-prix-circuit_f.jpg"
-                        alt="Miami Circuit" width="300" />
+            <h2 class="visually-hidden" id="list-title">Top stories</h2>
+            <div class="card-grid two-up">
+                <a class="card" href="article2.html">
+                    <div class="card-image">
+                        <img src="images/the-miami-international-autodrome.webp"
+                            alt="The Miami International Autodrome" />
+                    </div>
+                    <p class="card-tag">News</p>
+                    <h3 class="card-title">F1’s 2026 Rule Reset: The Technical Changes Arriving at the Miami Grand Prix</h3>
+                    <p class="card-meta"><time datetime="2026-04-20">20 April 2026</time></p>
+                    <div class="card-text"><p>Formula 1’s bold 2026 technical era was always expected to demand adjustment. After just <strong>three race weekends</strong>, that adjustment has already arrived. Ahead of the 2026 Miami Grand Prix, the FIA, Formula 1, team principals and power-unit manufacturers agreed a package of regulation refinements aimed at <strong>making the new cars safer, more predictable and more consistently “flat-out” to drive</strong>. The changes are set to apply from Miami onwards, with race-start procedures being tested there before wider adoption.</p></div>
                 </a>
-                <p>
-                    Formula 1’s bold 2026 technical era was always expected to demand adjustment. After just
-                    <strong>three race weekends</strong>,
-                    that adjustment has already arrived. Ahead of the 2026 Miami Grand Prix, the FIA, Formula 1, team
-                    principals
-                    and power-unit manufacturers agreed a package of regulation refinements aimed at <strong>making the
-                        new cars safer,
-                        more predictable and more consistently “flat-out” to drive</strong>. The changes are set to
-                    apply from Miami onwards,
-                    with race-start procedures being tested there before wider adoption....
-                </p>
-                <p><a href="article2.html">Read More →</a></p>
-            </article>
 
-            <article>
-                <h4><a href="article1.html">Bahrain and Saudi Arabia GP Cancelled</a></h4>
-                <a href="article1.html">
-                    <img src="https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/4765/live/7e3e03c0-1fae-11f1-9b38-b30876972faa.jpg"
-                    alt="Photo from the Saudi Arabian GP in 2025" width="300" />
+                <a class="card" href="article1.html">
+                    <div class="card-image">
+                        <img src="images/cars-on-track-at-the-2025-saudi-arabian-grand-prix.jpg"
+                            alt="Cars on track at the 2025 Saudi Arabian Grand Prix" />
+                    </div>
+                    <p class="card-tag">News</p>
+                    <h3 class="card-title">Bahrain and Saudi Arabia GP Cancelled</h3>
+                    <p class="card-meta"><time datetime="2026-03-14">14 March 2026</time></p>
+                    <div class="card-text"><p>Amid the ongoing dispute and rising tensions in the Middle East, the FIA have confirmed that <strong>the 4th and 5th rounds</strong> of this year's world championship <strong>will not take place.</strong> Williams driver and Director of the Grand Prix Drivers' Association (GPDA) <strong>Carlos Sainz</strong> stated on social media: “I truly hope that this conflict comes to an end as soon as possible and that everyone stays safe. Racing in the Middle East is always special and I hope we can return to the region as soon as circumstances allow.”</p></div>
                 </a>
-                <p>Amid the ongoing dispute and tensions rising in the middle east, the FIA have confirmed that
-                    <strong>the
-                        4th and 5th rounds</strong> of this years world championship <strong>will not take
-                        place.</strong> Williams Driver and Director
-                    of the Grand Prix Drivers' Association (GDPA) <strong>Carlos Sainz</strong> stated on social media
-                    "I truly hope that this conflict
-                    comes to an end as soon as possible and that everyone stays safe. Racing in the Middle East is
-                    always special and I hope we can return
-                    to the region as soon as circumstances allow." ...
-                </p>
-                <p><a href="article1.html">Read More →</a></p>
-            </article>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <hr />
-        <p><small>Andre Cini - The Grand Prix Network - News</small></p>
-    </footer>
 
     
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <a class="brand footer-brand" href="home.html">
+                <img class="brand-logo" src="images/logo-badge.png" alt="" width="117" height="44" />
+                <span class="brand-name">The Grand Prix Network</span>
+            </a>
+
+            <nav class="footer-nav" aria-label="Footer">
+                <ul>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="racerecaps.html">Race Recaps</a></li>
+                    <li><a href="standings.html">Standings</a></li>
+                    <li><a href="f1fantasy.html">F1 Fantasy</a></li>
+                    <li><a href="communityteams.html">Community Teams</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Instagram: put your account URL in the href, then remove these two comment lines.
+            <a class="footer-social" href="https://www.instagram.com/YOUR-ACCOUNT/">
+                <img src="images/instagramlogo.png" alt="" width="29" height="20" />
+                <span>Follow us on Instagram</span>
+            </a>
+            -->
+        </div>
+        <p class="footer-legal">&copy; 2026 Andre Cini. An independent fan site, not affiliated with Formula 1.</p>
+    </footer>
 </body>
 
 </html>

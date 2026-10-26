@@ -5,7 +5,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>The Grand Prix Network</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="logo.png">
     <script src="app.js" defer></script>
@@ -33,86 +35,173 @@
         </nav>
     </header>
 
-    <main>
-        <h1 class="page-title">Welcome to The Grand Prix Network</h1>
+    <main class="home">
+        <h1 class="visually-hidden">The Grand Prix Network: Formula 1 news, race recaps and F1 Fantasy tips</h1>
 
-        <section aria-labelledby="intro-title">
-            <h2 id="intro-title">Welcome to the World of Formula One</h2>
-            <p>
-                This website allows all Formula 1 fans too indulge in the lastest Formula One
-                news, recaps and to keep up to date with the standings and the upcoming schedule.
-            </p>
-            <p>
-                We also offer F1 Fantasy tips and tricks to win your mini leagues and rise up
-                the global ranks. Suggested line-ups, top picks and projections can all be found
-                on the F1 Fantasy tab.
-            </p>
-            <p>
-                Feel free to <a href="contact.html">Contact Us</a> at any time of the day and we will
-                respond as soon as possible!
-            </p>
-        </section>
-
-        <section aria-labelledby="featured-title">
-            <h3 id="featured-title">Get Started!</h3>
-            <ul>
-                <li>View the latest <a href="standings.html">Championship Standings</a></li>
-                <li>Check out the most recent <a href="news.html">News</a> stories in the paddock</li>
-                <li>Build your personal <a href="f1fantasy.html">F1 Fantasy Team</a> and get tips on how to overtake the
-                    field</li>
-                <li>Missed a race? Fear not view our detailed <a href="racerecaps.html">Race Recaps</a></li>
-            </ul>
-        </section>
-
-        <section class="next-race-hub">
-            <h2>Next Race:</h2>
-
-            <article class="race-card">
-                <div class="race-details">
-                    <h3 id="raceName">Canadian Grand Prix</h3>
-                    <p id="raceDate">Date: 24th of May 2026</p>
-                    <p id="raceCountdown">Loading countdown...</p>
-
-                    <div id="raceWeather">
-                        Loading race weather...
+        <!-- Next race: the countdown and weather are filled in by app.js -->
+        <section class="race-hero" aria-labelledby="raceName">
+            <div class="race-hero-inner">
+                <div class="race-hero-main">
+                    <div class="start-lights" aria-hidden="true">
+                        <span></span><span></span><span></span><span></span><span></span>
                     </div>
+                    <p class="race-hero-kicker">Next race</p>
+                    <h2 class="race-hero-name" id="raceName">Mexico City Grand Prix</h2>
+                    <p class="race-hero-date">
+                        <span id="raceDate">Sunday 1 November 2026, 14:00 local time</span>
+                        <span class="race-hero-circuit">Autódromo Hermanos Rodríguez</span>
+                    </p>
+                    <p class="race-hero-countdown" id="raceCountdown" aria-live="polite">Loading countdown...</p>
+                    <div class="race-hero-weather" id="raceWeather">Loading race weather...</div>
                 </div>
 
-                <div class="race-image">
-                    <img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzrtMW8E8KYzmNvUxN8TQLLvPIuhNCSI6KTg&s">
+                <div class="race-hero-schedule">
+                    <h3>Weekend schedule</h3>
+                    <table class="schedule">
+                        <thead>
+                            <tr>
+                                <th scope="col">Session</th>
+                                <th scope="col">Track time</th>
+                                <th scope="col">Your time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><th scope="row">Practice 1</th><td>Fri 12:30</td><td data-session-utc="2026-10-30T18:30:00Z">–</td></tr>
+                            <tr><th scope="row">Practice 2</th><td>Fri 16:00</td><td data-session-utc="2026-10-30T22:00:00Z">–</td></tr>
+                            <tr><th scope="row">Practice 3</th><td>Sat 11:30</td><td data-session-utc="2026-10-31T17:30:00Z">–</td></tr>
+                            <tr><th scope="row">Qualifying</th><td>Sat 15:00</td><td data-session-utc="2026-10-31T21:00:00Z">–</td></tr>
+                            <tr class="is-race"><th scope="row">Race</th><td>Sun 14:00</td><td data-session-utc="2026-11-01T20:00:00Z">–</td></tr>
+                        </tbody>
+                    </table>
+                    <p class="schedule-note">Times from the official timetable and may change. Track time is Mexico City (UTC−6).</p>
                 </div>
-            </article>
-        </section>
-
-        <section aria-labelledby="featured-list">
-            <h3 id="featured-list">View More</h3>
-            <p>Get started with our latest race recap or the most recent piece of news down here:</p>
-
-            <div class="article-container">
-                <article>
-                    <h4><a href="miamigp.html">Miami Grand Prix</a></h4>
-                    <a href="miamigp.html">
-                        <img src="https://d3cm515ijfiu6w.cloudfront.net/wp-content/uploads/2026/05/02172809/f1-2026-miami-gp-sprint.jpg"/>
-                    </a>
-                    <p><a href="miamigp.html">Read More →</a></p>
-                </article>
-
-                <article>
-                    <h4><a href="article2.html">F1 2026 Rule Reset</a></h4>
-                    <a href="article2.html">
-                        <img src="https://newsgpcdn.vshcdn.net/i/images/3179/miami-f1-grand-prix-circuit_f.jpg"
-                        alt="Miami Circuit" width="300" />
-                    </a>
-                    <p><a href="article2.html">Read More →</a></p>
-                </article>
             </div>
         </section>
+
+        <div class="home-content">
+            <section aria-labelledby="latest-title">
+                <h2 class="section-title" id="latest-title">Latest</h2>
+
+                <div class="card-grid has-lead">
+                    <a class="card" href="miamigp.html">
+                        <div class="card-image">
+                            <img src="images/cars-racing-through-the-first-corner-at-the-2026-miami-grand.jpg"
+                                alt="Cars racing through the first corner at the 2026 Miami Grand Prix" />
+                        </div>
+                        <p class="card-tag">Race recap</p>
+                        <h3 class="card-title">Miami Grand Prix: Antonelli wins again, but McLaren bring the fight</h3>
+                        <p class="card-meta"><time datetime="2026-05-04">4 May 2026</time></p>
+                        <p class="card-text">Norris and Piastri pushed Mercedes harder than anyone this season, and only the strategy call kept Antonelli ahead.</p>
+                    </a>
+
+                    <a class="card" href="miamiprfd.html">
+                        <div class="card-image">
+                            <img src="images/the-podium-at-the-2026-miami-grand-prix.webp"
+                                alt="The podium at the 2026 Miami Grand Prix" />
+                        </div>
+                        <p class="card-tag">F1 Fantasy</p>
+                        <h3 class="card-title">Miami post-race fantasy debrief</h3>
+                        <p class="card-meta">Where our picks paid off and where they missed</p>
+                    </a>
+
+                    <a class="card" href="article2.html">
+                        <div class="card-image">
+                            <img src="images/the-miami-international-autodrome.webp"
+                                alt="The Miami International Autodrome" />
+                        </div>
+                        <p class="card-tag">News</p>
+                        <h3 class="card-title">F1’s 2026 rule reset: the changes arriving in Miami</h3>
+                        <p class="card-meta"><time datetime="2026-04-20">20 April 2026</time></p>
+                    </a>
+
+                    <a class="card" href="miamif1f.html">
+                        <div class="card-image">
+                            <img src="images/f1-fantasy-team-selection-screen.avif"
+                                alt="F1 Fantasy team selection screen" />
+                        </div>
+                        <p class="card-tag">F1 Fantasy</p>
+                        <h3 class="card-title">Miami top choices: who to buy and who to avoid</h3>
+                        <p class="card-meta"><time datetime="2026-04-27">27 April 2026</time></p>
+                    </a>
+
+                    <a class="card" href="japangp.html">
+                        <div class="card-image">
+                            <img src="suzukat1.png" alt="The field heading into Turn 1 at Suzuka" />
+                        </div>
+                        <p class="card-tag">Race recap</p>
+                        <h3 class="card-title">Japanese Grand Prix: a new championship leader</h3>
+                        <p class="card-meta"><time datetime="2026-03-30">30 March 2026</time></p>
+                    </a>
+
+                    <a class="card" href="article1.html">
+                        <div class="card-image">
+                            <img src="images/cars-on-track-at-the-2025-saudi-arabian-grand-prix.jpg"
+                                alt="Cars on track at the 2025 Saudi Arabian Grand Prix" />
+                        </div>
+                        <p class="card-tag">News</p>
+                        <h3 class="card-title">Bahrain and Saudi Arabia rounds called off</h3>
+                        <p class="card-meta"><time datetime="2026-03-14">14 March 2026</time></p>
+                    </a>
+                </div>
+            </section>
+
+            <section class="home-about" aria-labelledby="intro-title">
+                <div>
+                    <h2 id="intro-title">Welcome to the world of Formula One</h2>
+                    <p>
+                        This website allows all Formula 1 fans to indulge in the latest Formula One news and recaps,
+                        and to keep up to date with the standings and the upcoming schedule.
+                    </p>
+                    <p>
+                        We also offer F1 Fantasy tips and tricks to win your mini leagues and rise up the global
+                        ranks. Suggested line-ups, top picks and projections can all be found on the F1 Fantasy tab.
+                    </p>
+                    <p>
+                        Feel free to <a href="contact.html">contact us</a> at any time of the day and we will
+                        respond as soon as possible!
+                    </p>
+                </div>
+
+                <div>
+                    <h3 id="featured-title">Get started</h3>
+                    <ul class="get-started">
+                        <li>View the latest <a href="standings.html">championship standings</a></li>
+                        <li>Check out the most recent <a href="news.html">news</a> stories in the paddock</li>
+                        <li>Build your personal <a href="f1fantasy.html">F1 Fantasy team</a> and get tips on how to overtake the field</li>
+                        <li>Missed a race? Fear not, view our detailed <a href="racerecaps.html">race recaps</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
     </main>
 
-    <footer>
-        <hr /> <!-- This outputs a horizontal line-->
-        <p><small>Andre Cini - The Grand Prix Network - Home</small></p>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <a class="brand footer-brand" href="home.html">
+                <img class="brand-logo" src="images/logo-badge.png" alt="" width="117" height="44" />
+                <span class="brand-name">The Grand Prix Network</span>
+            </a>
+
+            <nav class="footer-nav" aria-label="Footer">
+                <ul>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="racerecaps.html">Race Recaps</a></li>
+                    <li><a href="standings.html">Standings</a></li>
+                    <li><a href="f1fantasy.html">F1 Fantasy</a></li>
+                    <li><a href="communityteams.html">Community Teams</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Instagram: put your account URL in the href, then remove these two comment lines.
+            <a class="footer-social" href="https://www.instagram.com/YOUR-ACCOUNT/">
+                <img src="images/instagramlogo.png" alt="" width="29" height="20" />
+                <span>Follow us on Instagram</span>
+            </a>
+            -->
+        </div>
+        <p class="footer-legal">&copy; 2026 Andre Cini. An independent fan site, not affiliated with Formula 1.</p>
     </footer>
 </body>
 

@@ -5,7 +5,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Miami - Top Choices</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="logo.png">
 </head>
@@ -33,22 +35,18 @@
         </nav>
     </header>
 
-    <main>
-        <h1 class="page-title">F1 Fantasy – Miami Top Choices</h1>
-
-        <p><a href="topchoices.html"> ← Back</a></p>
-        <div class="recap-title">
-            <h2><strong>Miami GP - Top Choices</strong></h2>
-        </div>
-        <div class="article-details">
-            <span><strong>Andre Cini</strong></span>
-            <span><strong>27th of April 2026</strong></span>
-        </div>
-        <div class="image-container">
-            <img src="https://www.f1-fansite.com/wp-content/uploads/2025/05/5-sunday-miami-2025-Custom.jpg"
-                alt="Podium from the 2025 Miami GP" />
-        </div>
-
+    <main class="reading">
+        <p class="back-link"><a href="topchoices.html">← Back to Top Choices</a></p>
+        <header class="story-header">
+            <h1 class="page-title">F1 Fantasy – Miami Top Choices</h1>
+            <p class="byline">
+                <span>By Andre Cini</span>
+                <time datetime="2026-04-27">27 April 2026</time>
+            </p>
+        </header>
+        <figure class="story-image">
+            <img src="images/podium-from-the-2025-miami-gp.jpg" alt="Podium from the 2025 Miami GP" />
+        </figure>
         <div class="article-body">
             <p>
                 The 2026 season returns after a month long break in the calendar as we head
@@ -58,7 +56,7 @@
                 coming to Miami, with increased Practice times, this weekend may throw us in for a
                 curveball.
             </p>
-            <h3>Last time out in Miami: Utter Papaya Dominance</h3>
+            <h2>Last time out in Miami: Utter Papaya Dominance</h2>
             <p>
                 Last time out in Miami, it was all McLaren; finishing <strong>1-2 twice</strong> in the
                 sprint and the race, with <strong>Lando Norris</strong> taking the Sprint win on the saturday
@@ -73,10 +71,10 @@
                 Here are my Top 3 drivers to potentially look at and to avoid.
             </p>
             <section class="fantasy-picks">
-                <h3>Buy and Avoid: Drivers</h3>
+                <h2>Buy and Avoid: Drivers</h2>
                 <div class="split-container">
                     <div class="pick-column">
-                        <h4>Drivers to Buy</h4>
+                        <h3>Drivers to Buy</h3>
                         <p>You have 5 choices, use them wisely as they could make or break your team.</p>
                         <ol>
                             <li>
@@ -111,7 +109,7 @@
                     </div>
 
                     <div class="pick-column">
-                        <h4>Drivers to Avoid</h4>
+                        <h3>Drivers to Avoid</h3>
                         <ol>
                             <li>
                                 <strong>Max Verstappen (£28.2M): </strong>At £28.2 Million, the most expensive driver in
@@ -146,12 +144,12 @@
             </section>
 
             <section class="fantasy-picks">
-                <h3>Buy and Avoid: Constructors</h3>
+                <h2>Buy and Avoid: Constructors</h2>
                 <p>What about the Constructors? They gain the most points in your team so it's crucial to get these
                     right.</p>
                 <div class="split-container">
                     <div class="pick-column">
-                        <h4>Constructors to Buy</h4>
+                        <h3>Constructors to Buy</h3>
                         <ol>
                             <li>
                                 <strong>Ferrari (£24.2M): </strong>Ferrari are bringing major upgrades to the East Coast
@@ -173,7 +171,7 @@
                     </div>
 
                     <div class="pick-column">
-                        <h4>Constructors to Avoid</h4>
+                        <h3>Constructors to Avoid</h3>
                         <ol>
                             <li>
                                 <strong>Aston Martin (£8.5M): </strong>Do I need to explain myself? With two negative
@@ -195,7 +193,7 @@
                 </div>
             </section>
         </div>
-        <h3>Chips: Time for Limitless</h3>
+        <h2>Chips: Time for Limitless</h2>
         <p>
             If you have not used your Limitless chip yet, I highly suggest using it this weekend; with this weekend
             being the last sprint weekend until <strong>The British Grand Prix</strong>
@@ -205,12 +203,12 @@
             chips, I think you should save the chips for a later day, it's early on in the
             season and I don't think using a 3x or no negative is worth it.
         </p>
-        <h3>Team Ideas:</h3>
+        <h2>Team Ideas:</h2>
         <p>
             With all that has been said above being taken into consideration, here are three teams that apply for high
             budget, low budget, and a limitless team.
         </p>
-        <h4>Team 1: £107.8M</h4>
+        <h3>Team 1: £107.8M</h3>
         <p>
             <strong>Drivers:</strong>
         </p>
@@ -234,7 +232,7 @@
             If you can afford this, do it.
         </p>
 
-        <h4>Team 2: £98.2M</h4>
+        <h3>Team 2: £98.2M</h3>
         <p>
             <strong>Drivers:</strong>
         </p>
@@ -257,7 +255,7 @@
             no Mercedes whatsover but everyone could realistically afford this and
             it has potential to do very well in Miami.
         </p>
-        <h4>Team 3: Limitless</h4>
+        <h3>Team 3: Limitless</h3>
         <p>
             <strong>Drivers:</strong>
         </p>
@@ -283,9 +281,33 @@
         </p>
     </main>
 
-    <footer>
-        <hr /> <!-- This outputs a horizontal line-->
-        <p><small>Andre Cini - The Grand Prix Network - Top Choices (Miami)</small></p>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <a class="brand footer-brand" href="home.html">
+                <img class="brand-logo" src="images/logo-badge.png" alt="" width="117" height="44" />
+                <span class="brand-name">The Grand Prix Network</span>
+            </a>
+
+            <nav class="footer-nav" aria-label="Footer">
+                <ul>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="racerecaps.html">Race Recaps</a></li>
+                    <li><a href="standings.html">Standings</a></li>
+                    <li><a href="f1fantasy.html">F1 Fantasy</a></li>
+                    <li><a href="communityteams.html">Community Teams</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Instagram: put your account URL in the href, then remove these two comment lines.
+            <a class="footer-social" href="https://www.instagram.com/YOUR-ACCOUNT/">
+                <img src="images/instagramlogo.png" alt="" width="29" height="20" />
+                <span>Follow us on Instagram</span>
+            </a>
+            -->
+        </div>
+        <p class="footer-legal">&copy; 2026 Andre Cini. An independent fan site, not affiliated with Formula 1.</p>
     </footer>
 </body>
 

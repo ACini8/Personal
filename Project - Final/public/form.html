@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <title>Grand Prix Network | Add Your Team</title>
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -32,7 +34,7 @@
     <main>
         <h1 class="page-title">Add Your F1 Fantasy Team</h1>
         <p class="page-actions"><a href="communityteams.html">← Back to Community Teams</a></p>
-        <p>Before Submitting, make sure everything is valid and up to date, any spelling mistakes will be fixed by us</p>
+        <p class="page-intro">Before submitting, make sure everything is valid and up to date. Any spelling mistakes will be fixed by us.</p>
 
         <section class="form-container">
             <form id="teamForm">
@@ -51,10 +53,10 @@
                 <div class="form-group">
                     <label>Regular Drivers *</label>
                     <div id="driversContainer">
-                        <input type="text" class="driver-input" placeholder="Driver 1" required>
-                        <input type="text" class="driver-input" placeholder="Driver 2" required>
-                        <input type="text" class="driver-input" placeholder="Driver 3">
-                        <input type="text" class="driver-input" placeholder="Driver 4">
+                        <input type="text" class="driver-input" placeholder="Driver 1" aria-label="Driver 1" required>
+                        <input type="text" class="driver-input" placeholder="Driver 2" aria-label="Driver 2" required>
+                        <input type="text" class="driver-input" placeholder="Driver 3" aria-label="Driver 3">
+                        <input type="text" class="driver-input" placeholder="Driver 4" aria-label="Driver 4">
                     </div>
                     <small class="error-message" id="driversError"></small>
                 </div>
@@ -62,8 +64,8 @@
                 <div class="form-group">
                     <label>Constructors *</label>
                     <div id="constructorsContainer">
-                        <input type="text" class="constructor-input" placeholder="Constructor 1" required>
-                        <input type="text" class="constructor-input" placeholder="Constructor 2" required>
+                        <input type="text" class="constructor-input" placeholder="Constructor 1" aria-label="Constructor 1" required>
+                        <input type="text" class="constructor-input" placeholder="Constructor 2" aria-label="Constructor 2" required>
                     </div>
                     <small class="error-message" id="constructorsError"></small>
                 </div>
@@ -93,11 +95,35 @@
         </section>
     </main>
 
-    <footer>
-        <hr /> <!-- This outputs a horizontal line-->
-        <p><small>Andre Cini - The Grand Prix Network - Add a Team</small></p>
-    </footer>
 
     <script src="app.js" defer></script>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <a class="brand footer-brand" href="home.html">
+                <img class="brand-logo" src="images/logo-badge.png" alt="" width="117" height="44" />
+                <span class="brand-name">The Grand Prix Network</span>
+            </a>
+
+            <nav class="footer-nav" aria-label="Footer">
+                <ul>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="racerecaps.html">Race Recaps</a></li>
+                    <li><a href="standings.html">Standings</a></li>
+                    <li><a href="f1fantasy.html">F1 Fantasy</a></li>
+                    <li><a href="communityteams.html">Community Teams</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Instagram: put your account URL in the href, then remove these two comment lines.
+            <a class="footer-social" href="https://www.instagram.com/YOUR-ACCOUNT/">
+                <img src="images/instagramlogo.png" alt="" width="29" height="20" />
+                <span>Follow us on Instagram</span>
+            </a>
+            -->
+        </div>
+        <p class="footer-legal">&copy; 2026 Andre Cini. An independent fan site, not affiliated with Formula 1.</p>
+    </footer>
 </body>
 </html>
