@@ -28,6 +28,7 @@
   --color-surface:       #ffffff;  /* cards, forms */
   --color-surface-alt:   #f9fafa;  /* inputs, subtle fills */
   --color-row-alt:       #ececec;  /* zebra table rows */
+  --color-row-hover:     #fdeaea;  /* table row hover */
   --color-border:        #cccccc;
   --color-white:         #ffffff;
 
@@ -39,6 +40,19 @@
   --card-radius:         12px;
   --card-shadow:         0 4px 10px rgba(0, 0, 0, 0.1);
   --card-shadow-hover:   0 8px 20px rgba(0, 0, 0, 0.2);
+
+  /* Team colours (2026 liveries, approximate) used for the standings stripes */
+  --team-mercedes:       #27f4d2;
+  --team-ferrari:        #e8002d;
+  --team-red-bull:       #3671c6;
+  --team-mclaren:        #ff8000;
+  --team-racing-bulls:   #6692ff;
+  --team-alpine:         #0093cc;
+  --team-haas:           #b6babd;
+  --team-audi:           #9b0f1d;
+  --team-williams:       #64c4ff;
+  --team-aston-martin:   #229971;
+  --team-cadillac:       #1e1e1e;
 
   --font-body:           'Inter', sans-serif;
 
@@ -623,24 +637,105 @@ input[type="checkbox"] + label {
 /*===================================================
   TABLE FOR STANDINGS
   =================================================== */
-th{
-  background: var(--color-header);
-  font-weight: bold;
-  padding: 4px 8px;
-}
-
-td{
-  text-align: center;
-  padding: 8px 12px;
-}
-
-table{
-  width: 100%;
+table {
+  width:           100%;
   border-collapse: collapse;
 }
 
-tr:nth-child(even) {
+/* Safety net: if a table is ever wider than the screen, it scrolls
+   inside its box instead of making the whole page scroll sideways. */
+.table-container {
+  overflow-x:    auto;
+  margin-bottom: var(--space-lg);
+  border-radius: var(--card-radius);
+  box-shadow:    var(--card-shadow);
+}
+
+/* Timing-screen style used by both championship tables */
+.standings {
+  background:  var(--color-surface);
+  font-size:   0.95rem;
+}
+
+.standings th {
+  background:     var(--color-header);
+  color:          var(--color-white);
+  font-size:      0.75rem;
+  font-weight:    700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-align:     left;
+  padding:        10px 12px;
+}
+
+.standings td {
+  text-align:    left;
+  padding:       10px 12px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.standings tbody tr:nth-child(even) {
   background: var(--color-row-alt);
+}
+
+.standings tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.standings tbody tr:hover {
+  background: var(--color-row-hover);
+}
+
+/* Position and points: centred, with digits that line up */
+.standings .col-pos,
+.standings .col-pts {
+  text-align:           center;
+  font-variant-numeric: tabular-nums;
+  width:                4.5rem;
+}
+
+.standings td.col-pos { font-weight: 700; }
+.standings td.col-pts { font-weight: 700; }
+.standings td.col-name { font-weight: 600; }
+
+.standings td.col-team,
+.standings td.col-nat {
+  color: var(--text-gray);
+}
+
+/* Team-colour stripe on the left of each row. The colour comes from the
+   row's team class, which points at a --team-* token in :root. */
+.standings tbody td:first-child {
+  box-shadow: inset 5px 0 0 var(--team-color, transparent);
+}
+
+.team-mercedes     { --team-color: var(--team-mercedes); }
+.team-ferrari      { --team-color: var(--team-ferrari); }
+.team-red-bull     { --team-color: var(--team-red-bull); }
+.team-mclaren      { --team-color: var(--team-mclaren); }
+.team-racing-bulls { --team-color: var(--team-racing-bulls); }
+.team-alpine       { --team-color: var(--team-alpine); }
+.team-haas         { --team-color: var(--team-haas); }
+.team-audi         { --team-color: var(--team-audi); }
+.team-williams     { --team-color: var(--team-williams); }
+.team-aston-martin { --team-color: var(--team-aston-martin); }
+.team-cadillac     { --team-color: var(--team-cadillac); }
+
+/* Phones: drop the nationality column so the table fits without scrolling */
+@media (max-width: 600px) {
+  .standings .col-nat { display: none; }
+
+  .standings th,
+  .standings td {
+    padding: 8px 8px;
+  }
+
+  .standings { font-size: 0.875rem; }
+
+  .standings .col-pos,
+  .standings .col-pts {
+    width: 3rem;
+  }
 }
 
 .race-classification {
@@ -690,22 +785,6 @@ tr:nth-child(even) {
     display:none; /*Hides the middle column on small phones to save space and avoid weird spacing*/
   }
   
-  table{
-    display: block;
-    width: 100%;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-
-  th{
-    font-size: 0.85rem;
-    padding: 4px 12px
-  }
-
-  td{
-    font-size: 1rem;
-    padding: 6px 10px;
-  }
 }
 
 /* Community Teams Display */
